@@ -35,7 +35,6 @@ architecture|архитектура
 area|пространство
 armchair|кресло
 army|армия
-arrest|арест
 article|статья
 assistance|поддержка
 assistant|ассистент
@@ -49,3 +48,65 @@ aunt|тетя
 author|автор
 autumn|осень
 award|награда
+baby|ребенок
+back|спина
+bad|плохой
+bag|сумка
+ball|мяч
+banana|банан
+bar|батончик(шоколадный)
+basis|основа
+beach|пляж
+beam|луч
+beard|борода
+beauty|красота
+bed|кровать
+bee|пчела
+beginning|начало
+best|лучший
+bicycle|велосипед
+big|большой
+bike|велосипед
+billion|миллиард
+binoculars|бинокль
+bin|мусорная корзина
+bird|птица
+birthday|день рождения
+biscuit|печенье
+bit|кусочек
+blackboard|школьная доска
+blackmail|шантаж
+blood|кровь
+board|доска
+boat|лодка
+body|тело
+book|книга
+bookshop|книжный магазин
+bottle|бутылка
+box|коробка
+boy|мальчик
+bracket|скобка
+bread|хлеб
+break|перерыв(перемена)
+breakfast|завтрак
+brick|кирпич
+brother|брат
+building|здание
+bulge|выпуклость
+bullet|пуля
+bully|хулиган
+bus|автобус
+business|бизнес
+cable|кабель
+cake|торт
+call|звонок
+calm|спокойный
+camera|фотоаппарат
+can|консервная банка
+capital|столица
+caption|заголовок
+car|машина
+card|открытка
+care|забота
+career|карьера
+cartoon|мультфильм
