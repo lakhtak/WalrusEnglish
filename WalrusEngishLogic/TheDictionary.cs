@@ -12,14 +12,31 @@ namespace WalrusEngishLogic
     {
         private Dictionary<string, string> _words;
         private List<string> _variants;
-        private readonly bool _englishRussian;
         private KeyValuePair<string, string> _currentWord;
+        private static readonly string ApplicationDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         private readonly Random _random = new Random();
+        private const string Extension = ".txt";
 
-        public TheDictionary(bool englishRussian)
+        public bool EnglishRussian { get; private set; }
+        public string DictionaryFileName { get; private set; }
+
+        public TheDictionary(string dictionaryFileName, bool englishRussian)
         {
-            _englishRussian = englishRussian;
+            EnglishRussian = englishRussian;
+            DictionaryFileName = dictionaryFileName;
             LoadWordsFromFile();
+        }
+
+        public static string[] GetAvailableDictionaries()
+        {
+            var availableFiles = Directory.GetFiles(ApplicationDirectory, "*" + Extension);
+            if (!availableFiles.Any())
+            {
+                MessageBox.Show(string.Format("Мы не нашли ни одного файла со словами (*{0}) в папке {1}.", Extension, ApplicationDirectory),
+                "Ошибка.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return availableFiles.Select(Path.GetFileNameWithoutExtension).ToArray();
         }
 
         private void LoadWordsFromFile()
@@ -29,7 +46,7 @@ namespace WalrusEngishLogic
             _words = new Dictionary<string, string>();
             _variants = new List<string>();
 
-            var dictionaryFilePath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Words.txt");
+            var dictionaryFilePath = Path.Combine(ApplicationDirectory, DictionaryFileName + Extension);
             if (!File.Exists(dictionaryFilePath))
                 throw new FileNotFoundException("Мы не нашли файл словаря: " + dictionaryFilePath);
 
@@ -39,8 +56,8 @@ namespace WalrusEngishLogic
                 var splittedLine = line.Split(new[] {'|'}, 2);
                 if (splittedLine.Count() != 2) continue;
 
-                var word = _englishRussian ? splittedLine[0] : splittedLine[1];
-                var translation = _englishRussian ? splittedLine[1] : splittedLine[0];
+                var word = EnglishRussian ? splittedLine[0] : splittedLine[1];
+                var translation = EnglishRussian ? splittedLine[1] : splittedLine[0];
 
                 if (_words.ContainsKey(word)) continue;
                 
@@ -49,7 +66,7 @@ namespace WalrusEngishLogic
             }
 
             if(!_words.Any())
-                throw new FileLoadException(string.Format("Мы не нашли словаря в файле {0} :(", dictionaryFilePath));
+                throw new FileLoadException(string.Format("Мы не нашли ни одного слова в файле {0} :(", dictionaryFilePath));
 
             }
             catch (Exception ex)

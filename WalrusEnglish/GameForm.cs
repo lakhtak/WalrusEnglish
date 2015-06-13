@@ -39,7 +39,7 @@ namespace WalrusEnglishGui
             buttonStart.Visible = true;
         }
 
-        private void buttonStart_Click(object sender, System.EventArgs e)
+        private void buttonStart_Click(object sender, EventArgs e)
         {
             var startDialog = new NewGameDialog();
             startDialog.ShowDialog();

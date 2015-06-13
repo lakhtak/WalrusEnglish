@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WalrusEngishLogic;
 
@@ -16,6 +10,76 @@ namespace WalrusEnglishGui
         public NewGameDialog()
         {
             InitializeComponent();
+            Shown += InitializeControls;
+        }
+
+        private void InitializeControls(object sender, EventArgs e)
+        {
+            FillFailsToLose();
+            FillPointsToWin();
+            FillPlayerNames();
+            FillDictionaries();
+        }
+
+        private void FillDictionaries()
+        {
+            comboBoxDictionary.DataSource = TheDictionary.GetAvailableDictionaries();
+            if (Game.WordDictionary == null) return;
+
+            comboBoxDictionary.Text = Game.WordDictionary.DictionaryFileName;
+            if (Game.WordDictionary.EnglishRussian)
+                radioEnglishRussian.Checked = true;
+            else
+                radioRussianEnglish.Checked = true;
+        }
+
+        private void FillPlayerNames()
+        {
+            if (Game.PlayerOne == null) return;
+
+            textBoxPlayer1Name.Text = Game.PlayerOne.Name;
+
+            if (Game.PlayerTwo != null)
+            {
+                radioTwoPlayers.Checked = true;
+                textBoxPlayer2Name.Text = Game.PlayerTwo.Name;
+            }
+            else
+            {
+                radioTwoPlayers.Checked = false;
+            }
+        }
+
+        private void FillPointsToWin()
+        {
+            radioPoints1.Text = Constants.PointsToWin[0] + " point(s)";
+            radioPoints2.Text = Constants.PointsToWin[1] + " point(s)";
+            radioPoints3.Text = Constants.PointsToWin[2] + " point(s)";
+            
+            if (Game.PointsToWin == 0) return;
+
+            for (var i = 0; i < Constants.PointsToWin.Count(); i++)
+            {
+                if (Constants.PointsToWin[i] != Game.PointsToWin) continue;
+
+                panelPointsToWin.Controls.OfType<RadioButton>().First(radio => radio.TabIndex == i).Checked = true;
+            }
+        }
+
+        private void FillFailsToLose()
+        {
+            radioFails1.Text = Constants.FailsCount[0] + " fail(s)";
+            radioFails2.Text = Constants.FailsCount[1] + " fail(s)";
+            radioFails3.Text = Constants.FailsCount[2] + " fail(s)";
+            
+            if (Game.FailsToLose == 0) return;
+            
+            for (var i = 0; i < Constants.FailsCount.Count(); i++)
+            {
+                if (Constants.FailsCount[i] != Game.FailsToLose) continue;
+
+                panelFailsToLose.Controls.OfType<RadioButton>().First(radio => radio.TabIndex == i).Checked = true;
+            }
         }
 
         private void buttonCance_Click(object sender, EventArgs e)
@@ -45,7 +109,7 @@ namespace WalrusEnglishGui
             if (pointsToWin == 0)
                 throw new InvalidOperationException("pointsToWin = 0!");
 
-            Game.StartNew(textBoxPlayer1Name.Text, textBoxPlayer2Name.Text, radioEnglishRussian.Checked, failsToLose, pointsToWin);
+            Game.StartNew(textBoxPlayer1Name.Text, textBoxPlayer2Name.Text, radioEnglishRussian.Checked, comboBoxDictionary.Text, failsToLose, pointsToWin);
             Close();
             Program.TheGameForm.SetStartMessage();
             Program.TheGameForm.Redraw();
@@ -67,19 +131,6 @@ namespace WalrusEnglishGui
             
             if (radioOnePlayer.Checked)
                 textBoxPlayer2Name.Text = string.Empty;
-        }
-
-        private void NewGameDialog_Load(object sender, EventArgs e)
-        {
-            radioTwoPlayers.Checked = true;
-
-            radioFails1.Text = Constants.FailsCount[0] + " fail(s)";
-            radioFails2.Text = Constants.FailsCount[1] + " fail(s)";
-            radioFails3.Text = Constants.FailsCount[2] + " fail(s)";
-
-            radioPoints1.Text = Constants.PointsToWin[0] + " point(s)";
-            radioPoints2.Text = Constants.PointsToWin[1] + " point(s)";
-            radioPoints3.Text = Constants.PointsToWin[2] + " point(s)";
         }
     }
 }

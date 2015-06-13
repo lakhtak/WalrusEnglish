@@ -47,6 +47,12 @@
     <Compile Include="TheDictionary.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Words-a.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Words-b.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Words.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

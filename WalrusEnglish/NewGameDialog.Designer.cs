@@ -32,15 +32,15 @@
             this.labelPlayers = new System.Windows.Forms.Label();
             this.radioTwoPlayers = new System.Windows.Forms.RadioButton();
             this.radioOnePlayer = new System.Windows.Forms.RadioButton();
+            this.textBoxPlayer1Name = new System.Windows.Forms.TextBox();
+            this.labelPlayerTwoName = new System.Windows.Forms.Label();
+            this.textBoxPlayer2Name = new System.Windows.Forms.TextBox();
+            this.labelPlayerOneName = new System.Windows.Forms.Label();
             this.panelPointsToWin = new System.Windows.Forms.Panel();
             this.labelPointsToWin = new System.Windows.Forms.Label();
             this.radioPoints3 = new System.Windows.Forms.RadioButton();
             this.radioPoints2 = new System.Windows.Forms.RadioButton();
             this.radioPoints1 = new System.Windows.Forms.RadioButton();
-            this.labelPlayerOneName = new System.Windows.Forms.Label();
-            this.textBoxPlayer1Name = new System.Windows.Forms.TextBox();
-            this.labelPlayerTwoName = new System.Windows.Forms.Label();
-            this.textBoxPlayer2Name = new System.Windows.Forms.TextBox();
             this.panelFailsToLose = new System.Windows.Forms.Panel();
             this.labelFailCount = new System.Windows.Forms.Label();
             this.radioFails3 = new System.Windows.Forms.RadioButton();
@@ -52,6 +52,8 @@
             this.labelTranslation = new System.Windows.Forms.Label();
             this.radioRussianEnglish = new System.Windows.Forms.RadioButton();
             this.radioEnglishRussian = new System.Windows.Forms.RadioButton();
+            this.comboBoxDictionary = new System.Windows.Forms.ComboBox();
+            this.labelDictionary = new System.Windows.Forms.Label();
             this.panelPlayerNumber.SuspendLayout();
             this.panelPointsToWin.SuspendLayout();
             this.panelFailsToLose.SuspendLayout();
@@ -109,6 +111,43 @@
             this.radioOnePlayer.UseVisualStyleBackColor = true;
             this.radioOnePlayer.CheckedChanged += new System.EventHandler(this.radioOnePlayer_CheckedChanged);
             // 
+            // textBoxPlayer1Name
+            // 
+            this.textBoxPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPlayer1Name.Location = new System.Drawing.Point(450, 32);
+            this.textBoxPlayer1Name.Name = "textBoxPlayer1Name";
+            this.textBoxPlayer1Name.Size = new System.Drawing.Size(266, 31);
+            this.textBoxPlayer1Name.TabIndex = 3;
+            // 
+            // labelPlayerTwoName
+            // 
+            this.labelPlayerTwoName.AutoSize = true;
+            this.labelPlayerTwoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPlayerTwoName.Location = new System.Drawing.Point(267, 78);
+            this.labelPlayerTwoName.Name = "labelPlayerTwoName";
+            this.labelPlayerTwoName.Size = new System.Drawing.Size(177, 25);
+            this.labelPlayerTwoName.TabIndex = 4;
+            this.labelPlayerTwoName.Text = "Player two name:";
+            // 
+            // textBoxPlayer2Name
+            // 
+            this.textBoxPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPlayer2Name.Location = new System.Drawing.Point(450, 75);
+            this.textBoxPlayer2Name.MaxLength = 20;
+            this.textBoxPlayer2Name.Name = "textBoxPlayer2Name";
+            this.textBoxPlayer2Name.Size = new System.Drawing.Size(266, 31);
+            this.textBoxPlayer2Name.TabIndex = 5;
+            // 
+            // labelPlayerOneName
+            // 
+            this.labelPlayerOneName.AutoSize = true;
+            this.labelPlayerOneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPlayerOneName.Location = new System.Drawing.Point(267, 35);
+            this.labelPlayerOneName.Name = "labelPlayerOneName";
+            this.labelPlayerOneName.Size = new System.Drawing.Size(180, 25);
+            this.labelPlayerOneName.TabIndex = 2;
+            this.labelPlayerOneName.Text = "Player one name:";
+            // 
             // panelPointsToWin
             // 
             this.panelPointsToWin.Controls.Add(this.labelPointsToWin);
@@ -164,43 +203,6 @@
             this.radioPoints1.TabIndex = 0;
             this.radioPoints1.Text = "5 points";
             this.radioPoints1.UseVisualStyleBackColor = true;
-            // 
-            // labelPlayerOneName
-            // 
-            this.labelPlayerOneName.AutoSize = true;
-            this.labelPlayerOneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayerOneName.Location = new System.Drawing.Point(267, 35);
-            this.labelPlayerOneName.Name = "labelPlayerOneName";
-            this.labelPlayerOneName.Size = new System.Drawing.Size(180, 25);
-            this.labelPlayerOneName.TabIndex = 2;
-            this.labelPlayerOneName.Text = "Player one name:";
-            // 
-            // textBoxPlayer1Name
-            // 
-            this.textBoxPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPlayer1Name.Location = new System.Drawing.Point(450, 32);
-            this.textBoxPlayer1Name.Name = "textBoxPlayer1Name";
-            this.textBoxPlayer1Name.Size = new System.Drawing.Size(266, 31);
-            this.textBoxPlayer1Name.TabIndex = 3;
-            // 
-            // labelPlayerTwoName
-            // 
-            this.labelPlayerTwoName.AutoSize = true;
-            this.labelPlayerTwoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayerTwoName.Location = new System.Drawing.Point(267, 78);
-            this.labelPlayerTwoName.Name = "labelPlayerTwoName";
-            this.labelPlayerTwoName.Size = new System.Drawing.Size(177, 25);
-            this.labelPlayerTwoName.TabIndex = 4;
-            this.labelPlayerTwoName.Text = "Player two name:";
-            // 
-            // textBoxPlayer2Name
-            // 
-            this.textBoxPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPlayer2Name.Location = new System.Drawing.Point(450, 75);
-            this.textBoxPlayer2Name.MaxLength = 20;
-            this.textBoxPlayer2Name.Name = "textBoxPlayer2Name";
-            this.textBoxPlayer2Name.Size = new System.Drawing.Size(266, 31);
-            this.textBoxPlayer2Name.TabIndex = 5;
             // 
             // panelFailsToLose
             // 
@@ -324,11 +326,33 @@
             this.radioEnglishRussian.Text = "From English to Russian";
             this.radioEnglishRussian.UseVisualStyleBackColor = true;
             // 
+            // comboBoxDictionary
+            // 
+            this.comboBoxDictionary.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxDictionary.FormattingEnabled = true;
+            this.comboBoxDictionary.Location = new System.Drawing.Point(12, 361);
+            this.comboBoxDictionary.Name = "comboBoxDictionary";
+            this.comboBoxDictionary.Size = new System.Drawing.Size(220, 33);
+            this.comboBoxDictionary.TabIndex = 10;
+            // 
+            // labelDictionary
+            // 
+            this.labelDictionary.AutoSize = true;
+            this.labelDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDictionary.Location = new System.Drawing.Point(12, 333);
+            this.labelDictionary.Name = "labelDictionary";
+            this.labelDictionary.Size = new System.Drawing.Size(114, 25);
+            this.labelDictionary.TabIndex = 11;
+            this.labelDictionary.Text = "Dictionary:";
+            // 
             // NewGameDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 411);
+            this.Controls.Add(this.labelDictionary);
+            this.Controls.Add(this.comboBoxDictionary);
             this.Controls.Add(this.panelTranslation);
             this.Controls.Add(this.buttonCance);
             this.Controls.Add(this.buttonOk);
@@ -340,7 +364,6 @@
             this.MinimizeBox = false;
             this.Name = "NewGameDialog";
             this.Text = "Start New Game";
-            this.Load += new System.EventHandler(this.NewGameDialog_Load);
             this.panelPlayerNumber.ResumeLayout(false);
             this.panelPlayerNumber.PerformLayout();
             this.panelPointsToWin.ResumeLayout(false);
@@ -350,6 +373,7 @@
             this.panelTranslation.ResumeLayout(false);
             this.panelTranslation.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -379,5 +403,7 @@
         private System.Windows.Forms.Label labelTranslation;
         private System.Windows.Forms.RadioButton radioRussianEnglish;
         private System.Windows.Forms.RadioButton radioEnglishRussian;
+        private System.Windows.Forms.ComboBox comboBoxDictionary;
+        private System.Windows.Forms.Label labelDictionary;
     }
 }
