@@ -142,10 +142,10 @@
             // 
             this.textBoxPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPlayer1Name.Location = new System.Drawing.Point(166, 122);
-            this.textBoxPlayer1Name.MaxLength = 20;
+            this.textBoxPlayer1Name.MaxLength = 18;
             this.textBoxPlayer1Name.Name = "textBoxPlayer1Name";
             this.textBoxPlayer1Name.Size = new System.Drawing.Size(266, 31);
-            this.textBoxPlayer1Name.TabIndex = 3;
+            this.textBoxPlayer1Name.TabIndex = 2;
             // 
             // labelPlayerTwo
             // 
@@ -161,10 +161,10 @@
             // 
             this.textBoxPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxPlayer2Name.Location = new System.Drawing.Point(447, 122);
-            this.textBoxPlayer2Name.MaxLength = 20;
+            this.textBoxPlayer2Name.MaxLength = 18;
             this.textBoxPlayer2Name.Name = "textBoxPlayer2Name";
             this.textBoxPlayer2Name.Size = new System.Drawing.Size(266, 31);
-            this.textBoxPlayer2Name.TabIndex = 5;
+            this.textBoxPlayer2Name.TabIndex = 3;
             // 
             // labelPlayerOne
             // 
@@ -243,7 +243,7 @@
             this.panelFailsToLose.Location = new System.Drawing.Point(216, 206);
             this.panelFailsToLose.Name = "panelFailsToLose";
             this.panelFailsToLose.Size = new System.Drawing.Size(183, 147);
-            this.panelFailsToLose.TabIndex = 6;
+            this.panelFailsToLose.TabIndex = 2;
             // 
             // labelFailCount
             // 
@@ -297,7 +297,7 @@
             this.buttonOk.Location = new System.Drawing.Point(453, 363);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(139, 76);
-            this.buttonOk.TabIndex = 7;
+            this.buttonOk.TabIndex = 11;
             this.buttonOk.Text = "OK";
             this.buttonOk.UseVisualStyleBackColor = false;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
@@ -309,7 +309,7 @@
             this.buttonCance.Location = new System.Drawing.Point(615, 363);
             this.buttonCance.Name = "buttonCance";
             this.buttonCance.Size = new System.Drawing.Size(132, 76);
-            this.buttonCance.TabIndex = 8;
+            this.buttonCance.TabIndex = 12;
             this.buttonCance.Text = "Cancel";
             this.buttonCance.UseVisualStyleBackColor = false;
             this.buttonCance.Click += new System.EventHandler(this.buttonCance_Click);
@@ -323,7 +323,7 @@
             this.panelTranslation.Location = new System.Drawing.Point(453, 206);
             this.panelTranslation.Name = "panelTranslation";
             this.panelTranslation.Size = new System.Drawing.Size(290, 122);
-            this.panelTranslation.TabIndex = 9;
+            this.panelTranslation.TabIndex = 3;
             // 
             // labelTranslation
             // 
@@ -342,7 +342,7 @@
             this.radioRussianEnglish.Location = new System.Drawing.Point(8, 76);
             this.radioRussianEnglish.Name = "radioRussianEnglish";
             this.radioRussianEnglish.Size = new System.Drawing.Size(264, 29);
-            this.radioRussianEnglish.TabIndex = 5;
+            this.radioRussianEnglish.TabIndex = 1;
             this.radioRussianEnglish.Text = "From Russian to English";
             this.radioRussianEnglish.UseVisualStyleBackColor = true;
             // 
@@ -354,7 +354,7 @@
             this.radioEnglishRussian.Location = new System.Drawing.Point(8, 38);
             this.radioEnglishRussian.Name = "radioEnglishRussian";
             this.radioEnglishRussian.Size = new System.Drawing.Size(264, 29);
-            this.radioEnglishRussian.TabIndex = 4;
+            this.radioEnglishRussian.TabIndex = 0;
             this.radioEnglishRussian.TabStop = true;
             this.radioEnglishRussian.Text = "From English to Russian";
             this.radioEnglishRussian.UseVisualStyleBackColor = true;
