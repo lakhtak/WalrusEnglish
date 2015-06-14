@@ -63,9 +63,9 @@
             this.labelPlayer1Name.AutoEllipsis = true;
             this.labelPlayer1Name.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayer1Name.Location = new System.Drawing.Point(7, 137);
+            this.labelPlayer1Name.Location = new System.Drawing.Point(7, 36);
             this.labelPlayer1Name.Name = "labelPlayer1Name";
-            this.labelPlayer1Name.Size = new System.Drawing.Size(150, 65);
+            this.labelPlayer1Name.Size = new System.Drawing.Size(273, 39);
             this.labelPlayer1Name.TabIndex = 0;
             this.labelPlayer1Name.Text = "Player1Player1dddd";
             // 
@@ -75,9 +75,9 @@
             this.labelPlayer2Name.AutoEllipsis = true;
             this.labelPlayer2Name.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayer2Name.Location = new System.Drawing.Point(621, 137);
+            this.labelPlayer2Name.Location = new System.Drawing.Point(481, 36);
             this.labelPlayer2Name.Name = "labelPlayer2Name";
-            this.labelPlayer2Name.Size = new System.Drawing.Size(145, 65);
+            this.labelPlayer2Name.Size = new System.Drawing.Size(294, 39);
             this.labelPlayer2Name.TabIndex = 1;
             this.labelPlayer2Name.Text = "Player2Player2dddd";
             this.labelPlayer2Name.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -87,7 +87,7 @@
             this.labelPlayer2Points.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPlayer2Points.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer2Points.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayer2Points.Location = new System.Drawing.Point(707, 202);
+            this.labelPlayer2Points.Location = new System.Drawing.Point(716, 167);
             this.labelPlayer2Points.Name = "labelPlayer2Points";
             this.labelPlayer2Points.Size = new System.Drawing.Size(59, 25);
             this.labelPlayer2Points.TabIndex = 2;
@@ -98,7 +98,7 @@
             // 
             this.labelPlayer1Points.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer1Points.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayer1Points.Location = new System.Drawing.Point(7, 202);
+            this.labelPlayer1Points.Location = new System.Drawing.Point(7, 167);
             this.labelPlayer1Points.Name = "labelPlayer1Points";
             this.labelPlayer1Points.Size = new System.Drawing.Size(69, 25);
             this.labelPlayer1Points.TabIndex = 3;
@@ -248,7 +248,7 @@
             this.labelPlayer1Fails.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer1Fails.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPlayer1Fails.ForeColor = System.Drawing.Color.Red;
-            this.labelPlayer1Fails.Location = new System.Drawing.Point(7, 227);
+            this.labelPlayer1Fails.Location = new System.Drawing.Point(7, 192);
             this.labelPlayer1Fails.Name = "labelPlayer1Fails";
             this.labelPlayer1Fails.Size = new System.Drawing.Size(104, 25);
             this.labelPlayer1Fails.TabIndex = 11;
@@ -260,7 +260,7 @@
             this.labelPlayer2Fails.BackColor = System.Drawing.Color.Transparent;
             this.labelPlayer2Fails.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPlayer2Fails.ForeColor = System.Drawing.Color.Red;
-            this.labelPlayer2Fails.Location = new System.Drawing.Point(654, 227);
+            this.labelPlayer2Fails.Location = new System.Drawing.Point(663, 192);
             this.labelPlayer2Fails.Name = "labelPlayer2Fails";
             this.labelPlayer2Fails.Size = new System.Drawing.Size(112, 25);
             this.labelPlayer2Fails.TabIndex = 12;
@@ -294,7 +294,7 @@
             // pictureBoxPlayer2
             // 
             this.pictureBoxPlayer2.Image = global::WalrusEnglishGui.Properties.Resources.avatar01;
-            this.pictureBoxPlayer2.Location = new System.Drawing.Point(621, 34);
+            this.pictureBoxPlayer2.Location = new System.Drawing.Point(621, 64);
             this.pictureBoxPlayer2.Name = "pictureBoxPlayer2";
             this.pictureBoxPlayer2.Size = new System.Drawing.Size(145, 100);
             this.pictureBoxPlayer2.TabIndex = 101;
@@ -303,7 +303,7 @@
             // pictureBoxPlayer1
             // 
             this.pictureBoxPlayer1.Image = global::WalrusEnglishGui.Properties.Resources.avatar01;
-            this.pictureBoxPlayer1.Location = new System.Drawing.Point(12, 34);
+            this.pictureBoxPlayer1.Location = new System.Drawing.Point(12, 64);
             this.pictureBoxPlayer1.Name = "pictureBoxPlayer1";
             this.pictureBoxPlayer1.Size = new System.Drawing.Size(145, 100);
             this.pictureBoxPlayer1.TabIndex = 100;
