@@ -106,7 +106,7 @@ namespace WalrusEnglishGui
 
             var playerOne = new Player(textBoxPlayer1Name.Text, _playerOneAvatarNumber);
             var playerTwo = radioTwoPlayers.Checked
-                ? new Player(textBoxPlayer2Name.Text, _playerTwoAvatarNumber)
+                ? new Player(textBoxPlayer2Name.Text, _playerTwoAvatarNumber, lastChance: true)
                 : null;
             
             Game.StartNew(playerOne, playerTwo, radioEnglishRussian.Checked, comboBoxDictionary.Text, ReadFailsToLose(), ReadPointsToWin());
