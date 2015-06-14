@@ -21,10 +21,12 @@ namespace WalrusEnglishGui
             labelMessage.Text = GameMessage.Text(MessageType.Hello);
             
             labelPlayer1Name.Visible = false;
+            pictureBoxPlayer1.Visible = false;
             labelPlayer1Points.Visible = false;
             labelPlayer1Fails.Visible = false;
 
             labelPlayer2Name.Visible = false;
+            pictureBoxPlayer2.Visible = false;
             labelPlayer2Points.Visible = false;
             labelPlayer2Fails.Visible = false;
 
@@ -34,6 +36,7 @@ namespace WalrusEnglishGui
 
             labelFails.Visible = false;
             labelPoints.Visible = false;
+            labelDictionary.Visible = false;
 
             panelVariants.Visible = false;
             buttonStart.Visible = true;
@@ -52,6 +55,8 @@ namespace WalrusEnglishGui
                 ? Color.Red
                 : Color.Black;
             labelPlayer1Name.Visible = true;
+            pictureBoxPlayer1.Image = AvatarManager.GetAvatarByNumber(Game.PlayerOne.Avatar);
+            pictureBoxPlayer1.Visible = true;
             labelPlayer1Points.Text = Game.PlayerOne.Points.ToString(CultureInfo.InvariantCulture);
             labelPlayer1Points.Visible = true;
             labelPlayer1Fails.Text = new String('X', Game.PlayerOne.Fails);
@@ -63,6 +68,7 @@ namespace WalrusEnglishGui
             if (Game.PlayerTwo != null)
             {
                 labelPlayer2Name.Text = Game.PlayerTwo.Name;
+                pictureBoxPlayer2.Image = AvatarManager.GetAvatarByNumber(Game.PlayerTwo.Avatar, flip: true);
                 labelPlayer2Name.ForeColor = Game.CurrentPlayer.Name.Equals(Game.PlayerTwo.Name)
                     ? Color.Red
                     : Color.Black;
@@ -70,6 +76,7 @@ namespace WalrusEnglishGui
                 labelPlayer2Fails.Text = new String('X', Game.PlayerTwo.Fails);
             }
             labelPlayer2Name.Visible = Game.PlayerTwo != null;
+            pictureBoxPlayer2.Visible = Game.PlayerTwo != null;
             labelPlayer2Points.Visible = Game.PlayerTwo != null;
             labelPlayer2Fails.Visible = Game.PlayerTwo != null;
 
@@ -81,6 +88,9 @@ namespace WalrusEnglishGui
 
             labelPoints.Text = string.Format("Играем до {0} очков.", Game.PointsToWin.ToString(CultureInfo.InvariantCulture));
             labelPoints.Visible = true;
+
+            labelDictionary.Text = string.Format("Словарь: {0}.", Game.WordDictionary.DictionaryFileName);
+            labelDictionary.Visible = true;
 
             buttonStart.Visible = false;
             panelVariants.Visible = true;
@@ -159,6 +169,12 @@ namespace WalrusEnglishGui
         public void SetStartMessage()
         {
             labelMessage.Text = string.Format(GameMessage.Text(MessageType.MakeMove), Game.CurrentPlayer.Name);
+        }
+
+        private void newGameToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var startDialog = new NewGameDialog();
+            startDialog.ShowDialog();
         }
     }
 }

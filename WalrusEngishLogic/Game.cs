@@ -10,16 +10,13 @@
 
         public static TheDictionary WordDictionary;
 
-        public static void StartNew(string playerOneName, string playerTwoName, bool englishRussian, string dictionaryName, int failsToLose, int pointsToWin)
+        public static void StartNew(Player playerOne, Player playerTwo, bool englishRussian, string dictionaryName, int failsToLose, int pointsToWin)
         {
             WordDictionary = new TheDictionary(dictionaryName, englishRussian);
             FailsToLose = failsToLose;
             PointsToWin = pointsToWin;
-
-            PlayerOne = new Player(playerOneName);
-
-            PlayerTwo = !string.IsNullOrWhiteSpace(playerTwoName) ? new Player(playerTwoName, lastChance: true) : null;
-
+            PlayerOne = playerOne;
+            PlayerTwo = playerTwo;
             CurrentPlayer = PlayerOne;
         }
 

@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SealIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AvatarManager.cs" />
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,13 +91,48 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WalrusEngishLogic\WalrusEngishLogic.csproj">
       <Project>{823f2b74-f469-4d44-b012-d30dedf0752a}</Project>
       <Name>WalrusEngishLogic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avatar03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SealIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

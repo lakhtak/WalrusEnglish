@@ -7,6 +7,9 @@ namespace WalrusEnglishGui
 {
     public partial class NewGameDialog : Form
     {
+        private int _playerOneAvatarNumber = 1;
+        private int _playerTwoAvatarNumber = 1;
+
         public NewGameDialog()
         {
             InitializeComponent();
@@ -18,7 +21,17 @@ namespace WalrusEnglishGui
             FillFailsToLose();
             FillPointsToWin();
             FillPlayerNames();
+            FillPlayerAvatars();
             FillDictionaries();
+        }
+
+        private void FillPlayerAvatars()
+        {
+            _playerOneAvatarNumber = Game.PlayerOne == null ? 1 : Game.PlayerOne.Avatar;
+            pictureBoxPlayer1.Image = AvatarManager.GetAvatarByNumber(_playerOneAvatarNumber);
+
+            _playerTwoAvatarNumber = Game.PlayerTwo == null ? 1 : Game.PlayerTwo.Avatar;
+            pictureBoxPlayer2.Image = AvatarManager.GetAvatarByNumber(_playerTwoAvatarNumber, flip: true);
         }
 
         private void FillDictionaries()
@@ -91,15 +104,21 @@ namespace WalrusEnglishGui
         {
             if (!ValidateControls()) return;
 
-            var failsToLose = 0;
-            foreach (var radioFailsToLose in panelFailsToLose.Controls.OfType<RadioButton>().Where(radioFailsToLose => radioFailsToLose.Checked))
-            {
-                failsToLose = Constants.FailsCount[radioFailsToLose.TabIndex];
-            }
+            var playerOne = new Player(textBoxPlayer1Name.Text, _playerOneAvatarNumber);
+            var playerTwo = radioTwoPlayers.Checked
+                ? new Player(textBoxPlayer2Name.Text, _playerTwoAvatarNumber)
+                : null;
+            
+            Game.StartNew(playerOne, playerTwo, radioEnglishRussian.Checked, comboBoxDictionary.Text, ReadFailsToLose(), ReadPointsToWin());
+            
+            Close();
+            
+            Program.TheGameForm.SetStartMessage();
+            Program.TheGameForm.Redraw();
+        }
 
-            if (failsToLose == 0)
-                throw new InvalidOperationException("failsToLose = 0!");
-
+        private int ReadPointsToWin()
+        {
             var pointsToWin = 0;
             foreach (var radioPointsToWin in panelPointsToWin.Controls.OfType<RadioButton>().Where(radioPointsToWin => radioPointsToWin.Checked))
             {
@@ -109,10 +128,21 @@ namespace WalrusEnglishGui
             if (pointsToWin == 0)
                 throw new InvalidOperationException("pointsToWin = 0!");
 
-            Game.StartNew(textBoxPlayer1Name.Text, textBoxPlayer2Name.Text, radioEnglishRussian.Checked, comboBoxDictionary.Text, failsToLose, pointsToWin);
-            Close();
-            Program.TheGameForm.SetStartMessage();
-            Program.TheGameForm.Redraw();
+            return pointsToWin;
+        }
+
+        private int ReadFailsToLose()
+        {
+            var failsToLose = 0;
+            foreach (var radioFailsToLose in panelFailsToLose.Controls.OfType<RadioButton>().Where(radioFailsToLose => radioFailsToLose.Checked))
+            {
+                failsToLose = Constants.FailsCount[radioFailsToLose.TabIndex];
+            }
+
+            if (failsToLose == 0)
+                throw new InvalidOperationException("failsToLose = 0!");
+
+            return failsToLose;
         }
 
         private bool ValidateControls()
@@ -126,11 +156,19 @@ namespace WalrusEnglishGui
 
         private void radioOnePlayer_CheckedChanged(object sender, EventArgs e)
         {
-            labelPlayerTwoName.Visible = !radioOnePlayer.Checked;
+            labelPlayerTwo.Visible = !radioOnePlayer.Checked;
             textBoxPlayer2Name.Visible = !radioOnePlayer.Checked;
-            
-            if (radioOnePlayer.Checked)
-                textBoxPlayer2Name.Text = string.Empty;
+            pictureBoxPlayer2.Visible = !radioOnePlayer.Checked;
+        }
+
+        private void pictureBoxPlayer1_Click(object sender, EventArgs e)
+        {
+            pictureBoxPlayer1.Image = AvatarManager.GetNextAvatar(ref _playerOneAvatarNumber);
+        }
+
+        private void pictureBoxPlayer2_Click(object sender, EventArgs e)
+        {
+            pictureBoxPlayer2.Image = AvatarManager.GetNextAvatar(ref _playerTwoAvatarNumber, flip: true);
         }
     }
 }

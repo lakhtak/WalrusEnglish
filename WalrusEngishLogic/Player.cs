@@ -1,15 +1,19 @@
-﻿namespace WalrusEngishLogic
+﻿using System.Drawing;
+
+namespace WalrusEngishLogic
 {
     public class Player
     {
         public string Name { get; private set; }
+        public int Avatar { get; private set; }
         public int Points { get; private set; }
         public int Fails { get; private set; }
         public bool LastChance { get; private set; }
 
-        public Player(string name, bool lastChance = false)
+        public Player(string name, int avatar, bool lastChance = false)
         {
             Name = name;
+            Avatar = avatar;
             Points = 0;
             Fails = 0;
             LastChance = lastChance;

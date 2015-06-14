@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.panelPlayerNumber = new System.Windows.Forms.Panel();
+            this.pictureBoxPlayer2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPlayer1 = new System.Windows.Forms.PictureBox();
             this.labelPlayers = new System.Windows.Forms.Label();
             this.radioTwoPlayers = new System.Windows.Forms.RadioButton();
             this.radioOnePlayer = new System.Windows.Forms.RadioButton();
             this.textBoxPlayer1Name = new System.Windows.Forms.TextBox();
-            this.labelPlayerTwoName = new System.Windows.Forms.Label();
+            this.labelPlayerTwo = new System.Windows.Forms.Label();
             this.textBoxPlayer2Name = new System.Windows.Forms.TextBox();
-            this.labelPlayerOneName = new System.Windows.Forms.Label();
+            this.labelPlayerOne = new System.Windows.Forms.Label();
             this.panelPointsToWin = new System.Windows.Forms.Panel();
             this.labelPointsToWin = new System.Windows.Forms.Label();
             this.radioPoints3 = new System.Windows.Forms.RadioButton();
@@ -55,6 +57,8 @@
             this.comboBoxDictionary = new System.Windows.Forms.ComboBox();
             this.labelDictionary = new System.Windows.Forms.Label();
             this.panelPlayerNumber.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer1)).BeginInit();
             this.panelPointsToWin.SuspendLayout();
             this.panelFailsToLose.SuspendLayout();
             this.panelTranslation.SuspendLayout();
@@ -62,18 +66,41 @@
             // 
             // panelPlayerNumber
             // 
+            this.panelPlayerNumber.BackColor = System.Drawing.Color.Transparent;
+            this.panelPlayerNumber.Controls.Add(this.pictureBoxPlayer2);
+            this.panelPlayerNumber.Controls.Add(this.pictureBoxPlayer1);
             this.panelPlayerNumber.Controls.Add(this.labelPlayers);
             this.panelPlayerNumber.Controls.Add(this.radioTwoPlayers);
             this.panelPlayerNumber.Controls.Add(this.radioOnePlayer);
             this.panelPlayerNumber.Controls.Add(this.textBoxPlayer1Name);
-            this.panelPlayerNumber.Controls.Add(this.labelPlayerTwoName);
+            this.panelPlayerNumber.Controls.Add(this.labelPlayerTwo);
             this.panelPlayerNumber.Controls.Add(this.textBoxPlayer2Name);
-            this.panelPlayerNumber.Controls.Add(this.labelPlayerOneName);
-            this.panelPlayerNumber.Location = new System.Drawing.Point(12, 12);
+            this.panelPlayerNumber.Controls.Add(this.labelPlayerOne);
+            this.panelPlayerNumber.Location = new System.Drawing.Point(12, 14);
             this.panelPlayerNumber.Name = "panelPlayerNumber";
-            this.panelPlayerNumber.Size = new System.Drawing.Size(735, 118);
+            this.panelPlayerNumber.Size = new System.Drawing.Size(735, 165);
             this.panelPlayerNumber.TabIndex = 0;
             this.panelPlayerNumber.Tag = "";
+            // 
+            // pictureBoxPlayer2
+            // 
+            this.pictureBoxPlayer2.Image = global::WalrusEnglishGui.Properties.Resources.avatar01;
+            this.pictureBoxPlayer2.Location = new System.Drawing.Point(568, 5);
+            this.pictureBoxPlayer2.Name = "pictureBoxPlayer2";
+            this.pictureBoxPlayer2.Size = new System.Drawing.Size(145, 100);
+            this.pictureBoxPlayer2.TabIndex = 7;
+            this.pictureBoxPlayer2.TabStop = false;
+            this.pictureBoxPlayer2.Click += new System.EventHandler(this.pictureBoxPlayer2_Click);
+            // 
+            // pictureBoxPlayer1
+            // 
+            this.pictureBoxPlayer1.Image = global::WalrusEnglishGui.Properties.Resources.avatar01;
+            this.pictureBoxPlayer1.Location = new System.Drawing.Point(287, 5);
+            this.pictureBoxPlayer1.Name = "pictureBoxPlayer1";
+            this.pictureBoxPlayer1.Size = new System.Drawing.Size(145, 100);
+            this.pictureBoxPlayer1.TabIndex = 6;
+            this.pictureBoxPlayer1.TabStop = false;
+            this.pictureBoxPlayer1.Click += new System.EventHandler(this.pictureBoxPlayer1_Click);
             // 
             // labelPlayers
             // 
@@ -90,7 +117,7 @@
             this.radioTwoPlayers.AutoSize = true;
             this.radioTwoPlayers.Checked = true;
             this.radioTwoPlayers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioTwoPlayers.Location = new System.Drawing.Point(14, 76);
+            this.radioTwoPlayers.Location = new System.Drawing.Point(14, 68);
             this.radioTwoPlayers.Name = "radioTwoPlayers";
             this.radioTwoPlayers.Size = new System.Drawing.Size(146, 29);
             this.radioTwoPlayers.TabIndex = 1;
@@ -114,47 +141,49 @@
             // textBoxPlayer1Name
             // 
             this.textBoxPlayer1Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPlayer1Name.Location = new System.Drawing.Point(450, 32);
+            this.textBoxPlayer1Name.Location = new System.Drawing.Point(166, 122);
+            this.textBoxPlayer1Name.MaxLength = 20;
             this.textBoxPlayer1Name.Name = "textBoxPlayer1Name";
             this.textBoxPlayer1Name.Size = new System.Drawing.Size(266, 31);
             this.textBoxPlayer1Name.TabIndex = 3;
             // 
-            // labelPlayerTwoName
+            // labelPlayerTwo
             // 
-            this.labelPlayerTwoName.AutoSize = true;
-            this.labelPlayerTwoName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayerTwoName.Location = new System.Drawing.Point(267, 78);
-            this.labelPlayerTwoName.Name = "labelPlayerTwoName";
-            this.labelPlayerTwoName.Size = new System.Drawing.Size(177, 25);
-            this.labelPlayerTwoName.TabIndex = 4;
-            this.labelPlayerTwoName.Text = "Player two name:";
+            this.labelPlayerTwo.AutoSize = true;
+            this.labelPlayerTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPlayerTwo.Location = new System.Drawing.Point(445, 5);
+            this.labelPlayerTwo.Name = "labelPlayerTwo";
+            this.labelPlayerTwo.Size = new System.Drawing.Size(118, 25);
+            this.labelPlayerTwo.TabIndex = 4;
+            this.labelPlayerTwo.Text = "Player two:";
             // 
             // textBoxPlayer2Name
             // 
             this.textBoxPlayer2Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPlayer2Name.Location = new System.Drawing.Point(450, 75);
+            this.textBoxPlayer2Name.Location = new System.Drawing.Point(447, 122);
             this.textBoxPlayer2Name.MaxLength = 20;
             this.textBoxPlayer2Name.Name = "textBoxPlayer2Name";
             this.textBoxPlayer2Name.Size = new System.Drawing.Size(266, 31);
             this.textBoxPlayer2Name.TabIndex = 5;
             // 
-            // labelPlayerOneName
+            // labelPlayerOne
             // 
-            this.labelPlayerOneName.AutoSize = true;
-            this.labelPlayerOneName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPlayerOneName.Location = new System.Drawing.Point(267, 35);
-            this.labelPlayerOneName.Name = "labelPlayerOneName";
-            this.labelPlayerOneName.Size = new System.Drawing.Size(180, 25);
-            this.labelPlayerOneName.TabIndex = 2;
-            this.labelPlayerOneName.Text = "Player one name:";
+            this.labelPlayerOne.AutoSize = true;
+            this.labelPlayerOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPlayerOne.Location = new System.Drawing.Point(161, 5);
+            this.labelPlayerOne.Name = "labelPlayerOne";
+            this.labelPlayerOne.Size = new System.Drawing.Size(121, 25);
+            this.labelPlayerOne.TabIndex = 2;
+            this.labelPlayerOne.Text = "Player one:";
             // 
             // panelPointsToWin
             // 
+            this.panelPointsToWin.BackColor = System.Drawing.Color.Transparent;
             this.panelPointsToWin.Controls.Add(this.labelPointsToWin);
             this.panelPointsToWin.Controls.Add(this.radioPoints3);
             this.panelPointsToWin.Controls.Add(this.radioPoints2);
             this.panelPointsToWin.Controls.Add(this.radioPoints1);
-            this.panelPointsToWin.Location = new System.Drawing.Point(12, 161);
+            this.panelPointsToWin.Location = new System.Drawing.Point(12, 206);
             this.panelPointsToWin.Name = "panelPointsToWin";
             this.panelPointsToWin.Size = new System.Drawing.Size(149, 147);
             this.panelPointsToWin.TabIndex = 1;
@@ -206,11 +235,12 @@
             // 
             // panelFailsToLose
             // 
+            this.panelFailsToLose.BackColor = System.Drawing.Color.Transparent;
             this.panelFailsToLose.Controls.Add(this.labelFailCount);
             this.panelFailsToLose.Controls.Add(this.radioFails3);
             this.panelFailsToLose.Controls.Add(this.radioFails2);
             this.panelFailsToLose.Controls.Add(this.radioFails1);
-            this.panelFailsToLose.Location = new System.Drawing.Point(216, 161);
+            this.panelFailsToLose.Location = new System.Drawing.Point(216, 206);
             this.panelFailsToLose.Name = "panelFailsToLose";
             this.panelFailsToLose.Size = new System.Drawing.Size(183, 147);
             this.panelFailsToLose.TabIndex = 6;
@@ -262,32 +292,35 @@
             // 
             // buttonOk
             // 
+            this.buttonOk.BackColor = System.Drawing.SystemColors.Control;
             this.buttonOk.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonOk.Location = new System.Drawing.Point(453, 318);
+            this.buttonOk.Location = new System.Drawing.Point(453, 363);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(139, 76);
             this.buttonOk.TabIndex = 7;
             this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.UseVisualStyleBackColor = false;
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // buttonCance
             // 
+            this.buttonCance.BackColor = System.Drawing.SystemColors.Control;
             this.buttonCance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCance.Location = new System.Drawing.Point(615, 318);
+            this.buttonCance.Location = new System.Drawing.Point(615, 363);
             this.buttonCance.Name = "buttonCance";
             this.buttonCance.Size = new System.Drawing.Size(132, 76);
             this.buttonCance.TabIndex = 8;
             this.buttonCance.Text = "Cancel";
-            this.buttonCance.UseVisualStyleBackColor = true;
+            this.buttonCance.UseVisualStyleBackColor = false;
             this.buttonCance.Click += new System.EventHandler(this.buttonCance_Click);
             // 
             // panelTranslation
             // 
+            this.panelTranslation.BackColor = System.Drawing.Color.Transparent;
             this.panelTranslation.Controls.Add(this.labelTranslation);
             this.panelTranslation.Controls.Add(this.radioRussianEnglish);
             this.panelTranslation.Controls.Add(this.radioEnglishRussian);
-            this.panelTranslation.Location = new System.Drawing.Point(453, 161);
+            this.panelTranslation.Location = new System.Drawing.Point(453, 206);
             this.panelTranslation.Name = "panelTranslation";
             this.panelTranslation.Size = new System.Drawing.Size(290, 122);
             this.panelTranslation.TabIndex = 9;
@@ -331,7 +364,7 @@
             this.comboBoxDictionary.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxDictionary.FormattingEnabled = true;
-            this.comboBoxDictionary.Location = new System.Drawing.Point(12, 361);
+            this.comboBoxDictionary.Location = new System.Drawing.Point(12, 406);
             this.comboBoxDictionary.Name = "comboBoxDictionary";
             this.comboBoxDictionary.Size = new System.Drawing.Size(220, 33);
             this.comboBoxDictionary.TabIndex = 10;
@@ -339,8 +372,9 @@
             // labelDictionary
             // 
             this.labelDictionary.AutoSize = true;
+            this.labelDictionary.BackColor = System.Drawing.Color.Transparent;
             this.labelDictionary.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDictionary.Location = new System.Drawing.Point(12, 333);
+            this.labelDictionary.Location = new System.Drawing.Point(12, 378);
             this.labelDictionary.Name = "labelDictionary";
             this.labelDictionary.Size = new System.Drawing.Size(114, 25);
             this.labelDictionary.TabIndex = 11;
@@ -350,7 +384,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 411);
+            this.ClientSize = new System.Drawing.Size(771, 460);
             this.Controls.Add(this.labelDictionary);
             this.Controls.Add(this.comboBoxDictionary);
             this.Controls.Add(this.panelTranslation);
@@ -366,6 +400,8 @@
             this.Text = "Start New Game";
             this.panelPlayerNumber.ResumeLayout(false);
             this.panelPlayerNumber.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer1)).EndInit();
             this.panelPointsToWin.ResumeLayout(false);
             this.panelPointsToWin.PerformLayout();
             this.panelFailsToLose.ResumeLayout(false);
@@ -387,10 +423,10 @@
         private System.Windows.Forms.RadioButton radioPoints2;
         private System.Windows.Forms.RadioButton radioPoints1;
         private System.Windows.Forms.Label labelPointsToWin;
-        private System.Windows.Forms.Label labelPlayerOneName;
+        private System.Windows.Forms.Label labelPlayerOne;
         private System.Windows.Forms.TextBox textBoxPlayer1Name;
         private System.Windows.Forms.Label labelPlayers;
-        private System.Windows.Forms.Label labelPlayerTwoName;
+        private System.Windows.Forms.Label labelPlayerTwo;
         private System.Windows.Forms.TextBox textBoxPlayer2Name;
         private System.Windows.Forms.Panel panelFailsToLose;
         private System.Windows.Forms.Label labelFailCount;
@@ -405,5 +441,7 @@
         private System.Windows.Forms.RadioButton radioEnglishRussian;
         private System.Windows.Forms.ComboBox comboBoxDictionary;
         private System.Windows.Forms.Label labelDictionary;
+        private System.Windows.Forms.PictureBox pictureBoxPlayer2;
+        private System.Windows.Forms.PictureBox pictureBoxPlayer1;
     }
 }
