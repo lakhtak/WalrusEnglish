@@ -1,0 +1,206 @@
+﻿abbreviation|сокращение
+ability|способность
+abuse|оскорбление
+access|доступ
+accident|несчастный случай
+action|действие
+activity|деятельность
+actor|актер
+address|адрес
+adjective|имя прилагательное
+adult|взрослый
+advantage|преимущество
+adventure|приключение
+adverb|наречие
+advertisement|реклама
+advice|совет
+afternoon|после полудня
+age|возраст
+air|воздух
+airplane|самолет
+airport|аэропорт
+alarm|тревога
+alive|живой
+amazing|удивительный
+ambition|амбиция
+amount|количество
+anger|гнев
+animal|животное
+anniversary|юбилей
+announcement|объявление
+answer|ответ
+April|апрель
+architect|архитектор
+architecture|архитектура
+area|пространство
+armchair|кресло
+army|армия
+article|статья
+assistance|поддержка
+assistant|ассистент
+astronaut|астронавт
+atmosphere|атмосфера
+attention|внимание
+attitude|отношение
+attraction|аттракцион
+August|август
+aunt|тетя
+author|автор
+autumn|осень
+award|награда
+baby|ребенок
+back|спина
+bad|плохой
+bag|сумка
+ball|мяч
+banana|банан
+bar|батончик (шоколадный)
+basis|основа
+beach|пляж
+beam|луч
+beard|борода
+beauty|красота
+bed|кровать
+bee|пчела
+beginning|начало
+best|лучший
+bicycle|велосипед
+big|большой
+bike|велосипед
+billion|миллиард
+binoculars|бинокль
+bin|мусорная корзина
+bird|птица
+birthday|день рождения
+biscuit|печенье
+bit|кусочек
+blackboard|школьная доска
+blackmail|шантаж
+blood|кровь
+board|доска
+boat|лодка
+body|тело
+book|книга
+bookshop|книжный магазин
+bottle|бутылка
+box|коробка
+boy|мальчик
+bracket|скобка
+bread|хлеб
+break|перерыв (перемена)
+breakfast|завтрак
+brick|кирпич
+brother|брат
+building|здание
+bulge|выпуклость
+bullet|пуля
+bully|хулиган
+bus|автобус
+business|бизнес
+cable|кабель
+cake|торт
+call|звонок
+calm|спокойный
+camera|фотоаппарат
+can|консервная банка
+capital|столица
+caption|заголовок
+car|машина
+card|открытка
+care|забота
+career|карьера
+cartoon|мультфильм
+case|случай,дело
+cash|наличные деньги
+cassette|кассета
+cat|кошка
+catalogue|перечень
+cause|причина
+celebration|празднование
+centre|центр
+century|век
+certain|определенный
+chain|цепь
+chair|стул
+champion|чемпион
+chance|шанс
+change|перемена,изменение
+channel|канал
+character|персонаж, характер
+charity|благотворительность
+check|проверка
+cheese|сыр
+chemicals|химикаты
+chemistry|химия
+cheque|чек
+chess|шахматы
+chest|грудная клетка
+chicken|цыпленок
+child|ребенок
+childhood|детство
+chips|чипсы
+chocolate|шоколад
+choice|выбор
+Christmas|Рождество
+church|церковь
+cigarette|сигарета
+cinema|кинотеатр
+circle|круг
+circumstance|обстоятельство
+circus|цирк
+city|большой город
+class|класс
+classmate|одноклассник
+classroom|классная комната
+cliff|скала
+climate|климат
+clock|часы
+clothes|одежда
+cloud|облако
+club|клуб
+coast|побережье
+coastline|береговая линия
+coat|пальто
+coffee|кофе
+coin|монета
+colour|цвет
+column|колонка
+combination|комбинация
+comedy|комедия
+communication|общение
+companion|собеседник
+company|компания
+competition|соревнование
+complex|сложный
+computer|компьютер
+concern|забота
+concert|концерт
+conclusion|заключение
+conditions|условия
+conference|конференция
+conflict|конфликт
+consequence|последствие
+container|емкость
+content|содержание
+control|проверка
+conversation|разговор
+cook|повар
+cookbook|поваренная книга
+copybook|тетрадь
+corn|кукуруза
+corner|угол
+countable|исчисляемый
+country|страна
+countryman|сельский житель
+countryside|сельская местность
+courage|смелость
+cousin|двоюродный(ая) брат(сестра)
+crash|столкновение
+creature|живое существо
+crime|преступление
+criminal|преступник
+crowd|толпа
+cry|крик,плач
+cup|чашка
+cure|лечебное средство
+custom|обычай
